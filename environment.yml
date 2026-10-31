@@ -1,0 +1,14 @@
+name: book-server
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12
+  - tk=*=xft_*
+  - pillow
+  - reportlab
+  - beautifulsoup4
+  - pypdf
+  - pip
+  - pip:
+      - customtkinter
+      - playwright
