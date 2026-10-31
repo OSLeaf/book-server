@@ -4,40 +4,15 @@ A desktop app that turns Patreon collections into readable PDFs, and is growing 
 
 ## Background
 
-The project started with one purpose: getting books published in Patreon into a pdf format that is actually comfortable to read. Patreon is clearly not intended for book reading as the default order is "newest first" (spoilers) and there is no "next chapter" buttons.
+I started this as reading books in Patreon is not fun experience. It is clearly not intended for book reading as the default order is "newest first" (spoilers) and there is no "next chapter" buttons. Every time you want to read the next chapter you first have to find it by scrolling trough as many spoilers as possible. This software scrapes them and turns them into comfortable pdf reading experience. Furthermore I have found it irritating when some early chapters disappear from Royal Road and I can no longer go to relive some of the best moments in the books that I have red. So I will soon add functionality to scrape those as well.
 
-It has since expanded beyond that. Books that do not come from Patreon can now be added too, so the app is becoming a general library for personal reading. The longer-term plan is to host it on my home server and add a reader, so I can access it via internet without the need of loading the resulting pdf to my devices.
-
-## Current features
-
-- **Creators and collections**: add a Patreon creator and list their collections; the list is refreshed without ever deleting entries, so books stay in the library even if the author later removes them from Patreon
-- **PDF generation**: each collection is downloaded and built into an A5 PDF with cover, title page and page numbers
-- **Covers**: set a cover from any image (PNG, JPG, ...) or from an SVG, which is rendered at print resolution and is not tied to a fixed pixel size
-- **Imported PDFs**: add books that are not from Patreon; the cover can be applied to them as a new first page (the untouched original is kept as `*.orig.pdf`, so the cover can be changed repeatedly)
-- **Display names**: rename any book without affecting files, scraping or the PDF; the original name is shown on hover
-- **Natural sorting and filtering**: the list is ordered alphabetically with numbers handled correctly
+This has since expanded beyond that. Easier Patreon compatibility with GUI was added, so the app is becoming a general book library for me. The longer-term plan is to host it on my home server and add a reader, so I can access it via internet without the need of loading the resulting pdf to my devices.
 
 ## Roadmap
 
+- Royal Road downloader.
 - Host the library on a home server
 - Web reader, so books can be read from phone, tablet and computer
-- Reading position and library state shared between devices
-
-## Requirements
-
-- Python 3.10 or newer
-- Chromium for Playwright (used for scraping and for rendering SVG covers)
-
-```
-pip install customtkinter pillow playwright reportlab beautifulsoup4 pypdf
-playwright install chromium
-```
-
-## Running
-
-```
-python app.py
-```
 
 ## Project layout
 
